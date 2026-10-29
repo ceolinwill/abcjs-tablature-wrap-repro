@@ -1,6 +1,6 @@
 # abcjs: no tablature when `renderAbc` wraps lines
 
-Minimal reproduction for `renderAbc` dropping the guitar tab when it gets both `tablature` and `wrap`. Without `wrap`, the same tune draws its tab staff under the notes; with `wrap` (and `staffwidth`), only the notes are drawn.
+Minimal reproduction for `renderAbc` dropping the guitar tab when it gets both `tablature` and `wrap`. Reported in https://github.com/paulrosen/abcjs/issues/1195. Without `wrap`, the same tune draws its tab staff under the notes; with `wrap` (and `staffwidth`), only the notes are drawn.
 
 ## Reproduction
 
