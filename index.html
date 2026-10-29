@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>abcjs: no tablature with wrap</title>
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.7.2/dist/abcjs-basic-min.js"></script>
+  </head>
+  <body>
+    <h2>Without <code>wrap</code></h2>
+    <div id="without"></div>
+    <h2>With <code>wrap</code></h2>
+    <div id="with"></div>
+    <script>
+      const tune = "X:1\nM:4/4\nL:1/4\nK:G\nG A B c | d e f g | g f e d | c B A G |]";
+      const tablature = [{ instrument: "guitar" }];
+      ABCJS.renderAbc("without", tune, { staffwidth: 300, tablature });
+      ABCJS.renderAbc("with", tune, { staffwidth: 300, tablature, wrap: { preferredMeasuresPerLine: 2 } });
+    </script>
+  </body>
+</html>
